@@ -1,0 +1,7 @@
+<!--pages/content/content.wxml-->
+<view class="conter">
+  <view>content</view>
+  <view class="screen" wx:for="{{list}}" wx:for-item="item" bindtap="openContent">
+    {{item.releasedesc}}
+  </view>
+</view>
