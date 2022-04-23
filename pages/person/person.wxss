@@ -1,1 +1,100 @@
-/* pages/person/person.wxss */
+page{
+  background-color: rgba(194, 194, 194, 0.144);
+  color: rgb(44, 44, 44);
+}
+
+.userinfo{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin:8px 4px 15px 4px;
+
+  border-radius:10px;
+}
+
+/* 头像 */
+.userinfo-ava{
+  /* float: left;
+  /* margin-top:160rpx; 
+  width:50px;
+   height:50px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%; */
+
+    /* width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin:2px; */
+
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin:5px 2px 0px 10px;
+}
+
+.userinfo-name{
+  /* font-size: 32rpx;
+  font-weight: bold;
+  float: right;
+  width: 50px;
+  margin-left:60em; */
+  /* margin-top: 200rpx; */
+
+  /* width: 50%;
+  height: 1200rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 2px; */
+  /* color: rgb(102, 185, 134); */
+  float: right;
+  height: 100%;
+  width: 70%;
+  margin:10px;
+  font-size: large;
+}
+
+/* 简介 */
+.userinfo-brief{
+  color: rgb(100, 100, 100);
+  font-size: small;
+}
+
+.ava-image{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+}
+
+/* person */
+.person-list{
+  background-color: #fff;
+  margin:1px 4px 1px 4px;
+  border-radius:10px;
+  height: 200px;
+}
+
+.person-favorite{
+  height: 33%;
+  display: flex;
+  align-items: center;/*垂直居中*/
+  vertical-align: middle;
+}
+
+.person-comment{
+  height: 33%;
+  display: flex;
+  align-items: center;/*垂直居中*/
+}
+.person-clear{
+  height: 33%;
+  display: flex;
+  align-items: center;/*垂直居中*/
+}

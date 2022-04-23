@@ -1,0 +1,6 @@
+<!--pages/favorite/favorite.wxml-->
+<view class="screen" wx:for="{{list.data}}" wx:for-item="item">
+    <view catchtap='onPostTap' data-id="{{item.id}}">
+      {{item.title}}
+    </view>
+  </view>

@@ -1,14 +1,12 @@
-// pages/contentInfo/contentInfo.js
-const app = getApp();
+// pages/contentList/contentList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      contentId:0,
-      content:{},
-      article: {}						// 内容数据
+    category_id:0,
+    list:{}
   },
 
   /**
@@ -18,10 +16,10 @@ Page({
     const eventChannel = this.getOpenerEventChannel()
     var that = this
     eventChannel.on('acceptDataFromOpenerPage', function(data) {
-      that.contentId = data;
-      that.initContent(); // eventChannel为异步，故添加在contentId添加之后调用
+      //console.log(data)
+      that.data.category_id = data;
+      that.initData();
     });
-   
   },
 
   /**
@@ -74,40 +72,44 @@ Page({
   },
 
   /**
-   * 初始化页面内容
+   * 栏目id获取内容列表
    */
-  initContent:function(){
+  initData:function(){
     var that = this
-    var id =  that.contentId.data;
-    if (id != 0){
+    var id = that.data.category_id.data;
+    // if (id != 0){
     //   wx.request({
-    //     url: 'https://www.xiongyungang.top/content/get',
-    //     data: {'id': id},
+    //     url: 'https://www.xiongyungang.top/content/column',
+    //     data: {'category_id': id},
     //     method: 'POST',
     //     header: {
-    //       'Content-Type': 'application/x-www-form-urlencoded'
+    //       'content-type': 'application/x-www-form-urlencoded'
     //     },
     //     success: function (res) {
     //       //将获取到的json数据，存在名字叫list的这个数组中
     //       that.setData({
-    //         content: res.data.data
+    //         list: res.data
+    //         //res代表success函数的事件对，data是固定的，list是数组
     //       })
-    //       that.setMarkdownData()
     //     }
     //   })
-    }
+    // }
   },
 
   /**
-   * 页面转markdown格式
+   * 栏目内容列表跳转
    */
-  setMarkdownData:function(){
-   // markdown
-    let result = app.towxml(this.data.content.content,'markdown',{
-      //theme:'dark'					// 主题，默认`light`
-    });
-    this.setData({
-      article:result
+  onPostTap(event) {
+    // 获取自定义属性值
+    var id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../contentInfo/contentInfo',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', {
+          data: id
+        })
+      }
     })
-  }
+  },
 })

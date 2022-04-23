@@ -1,5 +1,41 @@
 <!--index.wxml-->
-<image bindload="imageLoad" data-index="{{ index }}" style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;" src="{{imageSrc}}"></image>
+
+<!-- 首页图片 -->
+<image bindload="autoImage" style="width:{{imageWidth}};height:{{ imageHeight }}" src="{{imageSrc}}"></image>
+
+<!-- 首页搜索 -->
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" bindinput ="searchEvent" class="weui-search-bar__input" placeholder="请输入搜索内容"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='searchCommit'>搜索</view>
+        </view>
+    </view>
+</view>
+
+<!-- 首页内容精选 -->
+<view class="conter">
+  <view class="selection">精选内容</view>
+  <!-- <view wx:for="{{list.data}}" wx:for-item="item">
+    <view class="screen"  catchtap='onPostTap' data-id="{{item.id}}">
+      <image class="screen-image" src="http://qiniu.xiongyungang.top/0065acbbcec14faa86c004a07d1f9040.png" mode="aspectFill"></image>
+      <view class="screen-title">{{item.title}}</view>
+      <view class="screen-content">{{item.content}}</view>
+    </view>
+  </view> -->
+  <view class="screen"  catchtap='onPostTap'>
+      <image class="screen-image" src="/images/home2.jpg" mode="aspectFill"></image>
+      <view class="screen-title">三五七言</view>
+      <view class="screen-content">山有木兮木有枝，心悦君兮君不知。</view>
+    </view>
+</view>
 
   <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -7,7 +43,7 @@
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view> -->
-  <view class="usermotto">
-    <!-- <button bindtap="chickme">测试点击事件</button> -->
   </view>
+  <view class="usermotto">
+    <button bindtap="chickme">测试点击事件</button>
+  </view> -->

@@ -1,18 +1,32 @@
-// pages/content/content.js
+// pages/contents/contents.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    categories:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    // wx.request({
+    //   url: 'https://www.xiongyungang.top/category/list',
+    //   method: 'POST',
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded'
+    //   },
+    //   success: function (res) {
+    //     //将获取到的json数据，存在名字叫list的这个数组中
+    //     that.setData({
+    //       categories: res.data,
+    //       //res代表success函数的事件对，data是固定的，list是数组
+    //     })
+    //   }
+    // })
   },
 
   /**
@@ -26,21 +40,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this
-    wx.request({
-      url: 'https://www.xiongyungang.top/rpdrelease_json',
-      method: 'POST',
-      headers: {
-        'content-type':'application/x-www-form-urlencoded'
-     },
-     success: function (res) {
-       //将获取到的json数据，存在名字叫list的这个数组中
-       that.setData({
-         list: res.data,
-         //res代表success函数的事件对，data是固定的，list是数组
-       })
-     }
-    })
+
   },
 
   /**
@@ -79,14 +79,19 @@ Page({
   },
 
   /**
-   * 首页页面跳转
+   *  目录页面跳转
+   * @param {*} event 
    */
-  openContent : function(){
+  onPostTap(event) {
+    // 获取自定义属性值
+    var id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../contentInfo/contentInfo',
-      success: function(res) {
+      url: '../contentList/contentList',
+      success: function (res) {
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
+        res.eventChannel.emit('acceptDataFromOpenerPage', {
+          data: id
+        })
       }
     })
   }

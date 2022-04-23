@@ -1,0 +1,14 @@
+<!--pages/contents/contents.wxml-->
+<view class="conter">
+  <view class="column-notice">栏目列表</view>
+  <!-- <view class="column-list" wx:for="{{categories.data}}" wx:for-item="item">
+    <view class="column-item" catchtap='onPostTap' data-id="{{item.id}}">
+      <image class="column-image" src="/images/home.jpg"></image>
+      <view class="column-title"> {{item.name}}</view>
+    </view>
+  </view> -->
+    <view class="column-item" catchtap='onPostTap'>
+      <image class="column-image" src="/images/home.jpg"></image>
+      <view class="column-title"> 文言文</view>
+    </view>
+  </view>

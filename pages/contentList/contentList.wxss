@@ -1,0 +1,25 @@
+/* pages/contentList/contentList.wxss */
+page{
+  background-color: rgba(221, 221, 221, 0.144);
+}
+.content-list{
+  height: 100%;
+}
+
+.content-item{
+  height: 100px;
+}
+
+.content-title{
+  font-size: small;
+}
+
+/*  */
+.content-detail{
+  font-size: x-small;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+/* pages/contents/contents.wxss */
+.column-notice{
+  font-size: x-large;
+  margin: 20px 10px;
+}
+
+.column-item{
+  height: 200px;
+  margin: 50px 10px;
+}
+
+.column-title{
+  font-size: x-large;
+}
+
+.column-image{
+  height: 90%;
+  width: 100%;
+}
