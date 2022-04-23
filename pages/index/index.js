@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    imageSrc: '../../images/timg.jpg',
+    imageSrc: '../../images/home.jpg',
     searchText: ''
   },
   //事件处理函数
