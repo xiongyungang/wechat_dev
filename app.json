@@ -8,6 +8,7 @@
       "pages/contentList/contentList",
       "pages/favorite/favorite"
     ],
+    "lazyCodeLoading": "requiredComponents",
     "window": {
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#fff",
