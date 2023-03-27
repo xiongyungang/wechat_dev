@@ -6,7 +6,8 @@
       "pages/contents/contents",
       "pages/search/search",
       "pages/contentList/contentList",
-      "pages/favorite/favorite"
+      "pages/favorite/favorite",
+      "pages/cans/cans"
     ],
     "lazyCodeLoading": "requiredComponents",
     "window": {
@@ -37,6 +38,12 @@
         {
           "pagePath": "pages/person/person",
           "text": "我的",
+          "selectedIconPath": "images/person.png",
+          "iconPath": "images/person_press.png"
+        },
+        {
+          "pagePath": "pages/cans/cans",
+          "text": "转盘",
           "selectedIconPath": "images/person.png",
           "iconPath": "images/person_press.png"
         }
