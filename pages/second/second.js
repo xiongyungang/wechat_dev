@@ -48,10 +48,8 @@ Page({
   },
 
   handleSwipe: function() {
-    if (this.touchEndX < this.touchStartX - 50) {
-      wx.navigateTo({
-        url: '../second/second'
-      });
+    if (this.touchEndX > this.touchStartX + 50) {
+      wx.navigateBack();
     }
   }
 })

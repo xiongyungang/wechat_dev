@@ -1,13 +1,7 @@
 {
     "pages": [
       "pages/index/index",
-      "pages/person/person",
-      "pages/contentInfo/contentInfo",
-      "pages/contents/contents",
-      "pages/search/search",
-      "pages/contentList/contentList",
-      "pages/favorite/favorite",
-      "pages/cans/cans"
+      "pages/second/second"
     ],
     "lazyCodeLoading": "requiredComponents",
     "window": {
@@ -17,36 +11,5 @@
       "navigationBarTextStyle": "black"
     },
     "style": "v2",
-    "sitemapLocation": "sitemap.json",
-    "tabBar": {
-      "color": "#a9b7b7",
-      "selectedColor": "#515151",
-      "borderStyle": "black",
-      "list": [
-        {
-          "pagePath": "pages/index/index",
-          "text": "首页",
-          "selectedIconPath": "images/icon_consult_press.png",
-          "iconPath": "images/icon_consult.png"
-        },
-        {
-          "pagePath": "pages/contents/contents",
-          "text": "目录",
-          "selectedIconPath": "images/contents.png",
-          "iconPath": "images/contents_press.png"
-        },
-        {
-          "pagePath": "pages/person/person",
-          "text": "我的",
-          "selectedIconPath": "images/person.png",
-          "iconPath": "images/person_press.png"
-        },
-        {
-          "pagePath": "pages/cans/cans",
-          "text": "转盘",
-          "selectedIconPath": "images/person.png",
-          "iconPath": "images/person_press.png"
-        }
-      ]
-    }
+    "sitemapLocation": "sitemap.json"
   }

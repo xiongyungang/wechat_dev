@@ -4,7 +4,7 @@ page {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .container {
@@ -18,7 +18,7 @@ page {
   position: relative;
 }
 
-.poster {
+.content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -36,34 +36,31 @@ page {
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.subtitle {
+.author {
   font-size: 28rpx;
-  margin-bottom: 40rpx;
-  opacity: 0.9;
-}
-
-.description {
-  font-size: 24rpx;
-  line-height: 1.6;
   margin-bottom: 60rpx;
-  max-width: 600rpx;
-  opacity: 0.8;
+  opacity: 0.9;
+  font-style: italic;
 }
 
-.footer {
-  font-size: 20rpx;
-  opacity: 0.7;
-  position: absolute;
-  bottom: 40rpx;
-  left: 0;
-  right: 0;
-  text-align: center;
+.poem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60rpx;
 }
 
-.swipe-hint {
+.line {
+  font-size: 32rpx;
+  line-height: 1.8;
+  margin-bottom: 20rpx;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.back-hint {
   position: absolute;
   bottom: 100rpx;
-  right: 40rpx;
+  left: 40rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,7 +84,7 @@ page {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-10rpx);
+    transform: translateX(10rpx);
   }
   100% {
     transform: translateX(0);
