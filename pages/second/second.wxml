@@ -1,12 +1,12 @@
 <view class="container" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd">
   <view class="content">
-    <view class="title">夜雨寄北</view>
-    <view class="author">李商隐</view>
+    <view class="title">{{currentVerse.title}}</view>
+    <view class="author">{{currentVerse.author}}</view>
     <view class="poem">
-      <view class="line">君问归期未有期</view>
-      <view class="line">巴山夜雨涨秋池</view>
-      <view class="line">何当共剪西窗烛</view>
-      <view class="line">却话巴山夜雨时</view>
+      <view class="line" wx:for="{{currentVerse.content}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="random-btn" bindtap="randomVerse">
+      <view class="btn-text">随机切换</view>
     </view>
   </view>
   <view class="back-hint" bindtap="goToPre">
