@@ -9,8 +9,12 @@
       <view class="line">却话巴山夜雨时</view>
     </view>
   </view>
-  <view class="back-hint">
+  <view class="back-hint" bindtap="goToPre">
     <view class="arrow">←</view>
-    <view class="hint-text">向右滑动返回</view>
+    <view class="hint-text">pre</view>
+  </view>
+  <view class="swipe-hint" bindtap="goToNext">
+    <view class="arrow">→</view>
+    <view class="hint-text">next</view>
   </view>
 </view>

@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="content">
+    <view class="title">Perfect</view>
+    <view class="artist">Ed Sheeran</view>
+    <scroll-view class="lyrics-container" scroll-y="true" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+      <view class="lyrics">
+        <view class="line">I found a love for me</view>
+        <view class="line">Darling just dive right in and follow my lead</view>
+        <view class="line">Well I found a girl beautiful and sweet</view>
+        <view class="line">I never knew you were the someone waiting for me</view>
+        <view class="line"></view>
+        <view class="line">'Cause we were just kids when we fell in love</view>
+        <view class="line">Not knowing what it was</view>
+        <view class="line">I will not give you up this time</view>
+        <view class="line">But darling just kiss me slow, your heart is all I own</view>
+        <view class="line">And in your eyes you're holding mine</view>
+        <view class="line"></view>
+        <view class="line">Baby, I'm dancing in the dark with you between my arms</view>
+        <view class="line">Barefoot on the grass, listening to our favorite song</view>
+        <view class="line">When you said you looked a mess, I whispered underneath my breath</view>
+        <view class="line">But you heard it, darling, you look perfect tonight</view>
+        <view class="line"></view>
+        <view class="line">Well I found a woman, stronger than anyone I know</view>
+        <view class="line">She shares my dreams, I hope that someday I'll share her home</view>
+        <view class="line">I found a love, to carry more than just my secrets</view>
+        <view class="line">To carry love, to carry children of our own</view>
+        <view class="line"></view>
+        <view class="line">We are still kids, but we're so in love</view>
+        <view class="line">Fighting against all odds</view>
+        <view class="line">I know we'll be alright this time</view>
+        <view class="line">Darling, just hold my hand</view>
+        <view class="line">Be my girl, I'll be your man</view>
+        <view class="line">I see my future in your eyes</view>
+        <view class="line"></view>
+        <view class="line">Baby, I'm dancing in the dark with you between my arms</view>
+        <view class="line">Barefoot on the grass, listening to our favorite song</view>
+        <view class="line">When I saw you in that dress, looking so beautiful</view>
+        <view class="line">I don't deserve this, darling, you look perfect tonight</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="back-hint" bindtap="goToPre">
+    <view class="arrow">←</view>
+    <view class="hint-text">pre</view>
+  </view>
+</view>

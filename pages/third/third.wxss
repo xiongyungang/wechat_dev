@@ -4,7 +4,7 @@ page {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .container {
@@ -26,7 +26,7 @@ page {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
-  color: white;
+  color: #333;
 }
 
 .title {
@@ -36,22 +36,28 @@ page {
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.author {
+.artist {
   font-size: 28rpx;
   margin-bottom: 60rpx;
-  opacity: 0.9;
+  opacity: 0.8;
   font-style: italic;
 }
 
-.poem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.lyrics-container {
+  width: 100%;
+  height: 800rpx;
+  overflow: hidden;
+  position: relative;
   margin-bottom: 60rpx;
 }
 
+.lyrics {
+  padding: 20rpx 0;
+  transition: transform 0.5s ease;
+}
+
 .line {
-  font-size: 32rpx;
+  font-size: 28rpx;
   line-height: 1.8;
   margin-bottom: 20rpx;
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -64,19 +70,7 @@ page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  opacity: 0.8;
-  animation: pulse 2s infinite;
-}
-
-.swipe-hint {
-  position: absolute;
-  bottom: 100rpx;
-  right: 40rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+  color: #333;
   opacity: 0.8;
   animation: pulse 2s infinite;
 }

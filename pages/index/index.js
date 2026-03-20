@@ -53,5 +53,11 @@ Page({
         url: '../second/second'
       });
     }
+  },
+
+  goToNext: function() {
+    wx.navigateTo({
+      url: '../second/second'
+    });
   }
 })

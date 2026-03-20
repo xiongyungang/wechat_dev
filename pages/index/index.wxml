@@ -3,8 +3,8 @@
     <view class="title">欢迎使用</view>
     <view class="subtitle">开启美好一天，从这里开始</view>
   </view>
-  <view class="swipe-hint">
+  <view class="swipe-hint" bindtap="goToNext">
     <view class="arrow">→</view>
-    <view class="hint-text">向左滑动</view>
+    <view class="hint-text">next</view>
   </view>
 </view>

@@ -1,10 +1,11 @@
 Page({
   data: {
-    
+    animation: null,
+    scrollTop: 0
   },
 
   onLoad: function (options) {
-    
+    this.startAutoScroll();
   },
 
   onReady: function () {
@@ -16,11 +17,11 @@ Page({
   },
 
   onHide: function () {
-    
+    this.stopAutoScroll();
   },
 
   onUnload: function () {
-    
+    this.stopAutoScroll();
   },
 
   onPullDownRefresh: function () {
@@ -37,23 +38,22 @@ Page({
 
   touchStartX: 0,
   touchEndX: 0,
+  scrollInterval: null,
 
   bindTouchStart: function(e) {
     this.touchStartX = e.changedTouches[0].clientX;
+    this.stopAutoScroll();
   },
 
   bindTouchEnd: function(e) {
     this.touchEndX = e.changedTouches[0].clientX;
     this.handleSwipe();
+    this.startAutoScroll();
   },
 
   handleSwipe: function() {
     if (this.touchEndX > this.touchStartX + 50) {
       wx.navigateBack();
-    } else if (this.touchEndX < this.touchStartX - 50) {
-      wx.navigateTo({
-        url: '../third/third'
-      });
     }
   },
 
@@ -61,9 +61,27 @@ Page({
     wx.navigateBack();
   },
 
-  goToNext: function() {
-    wx.navigateTo({
-      url: '../third/third'
-    });
+  startAutoScroll: function() {
+    let that = this;
+    this.scrollInterval = setInterval(function() {
+      let newScrollTop = that.data.scrollTop + 1;
+      that.setData({
+        scrollTop: newScrollTop
+      });
+      
+      // 当滚动到一定位置时重置
+      if (newScrollTop > 6000) {
+        that.setData({
+          scrollTop: 0
+        });
+      }
+    }, 50);
+  },
+
+  stopAutoScroll: function() {
+    if (this.scrollInterval) {
+      clearInterval(this.scrollInterval);
+      this.scrollInterval = null;
+    }
   }
 })
