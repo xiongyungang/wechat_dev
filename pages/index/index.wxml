@@ -1,7 +1,7 @@
 <view class="container" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd">
   <view class="poster">
     <view class="title">欢迎使用</view>
-    <view class="subtitle">开启美好一天，从这里开始</view>
+    <view class="motivational-phrase">{{timeGreeting}}！{{motivationalPhrase}}</view>
   </view>
   <view class="swipe-hint" bindtap="goToNext">
     <view class="arrow">→</view>

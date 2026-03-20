@@ -36,6 +36,21 @@ page {
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.time-greeting {
+  font-size: 24rpx;
+  font-weight: 500;
+  margin-bottom: 15rpx;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.motivational-phrase {
+  font-size: 24rpx;
+  margin-bottom: 40rpx;
+  opacity: 0.9;
+  max-width: 500rpx;
+  line-height: 1.4;
+}
+
 .subtitle {
   font-size: 28rpx;
   margin-bottom: 40rpx;
